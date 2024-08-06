@@ -1,0 +1,17 @@
+def user_plays_machine(): # the program 'thinks' of a number, and the user has to guess it
+  import random #This is a library of functions for generating random numbers
+  number = random.randrange(1,100)#This is a function that generates a random number between 1 and 100
+  guess = False#set a boolean to false to signify that the user has not guessed the number
+  while not guess:#while the boolean is false (which it is by default)), repeats the following code
+    user_guess = (int(input("Guess the machine number >")))#user enters a guess
+    if user_guess > number:#if the guess is too high
+      print("Too high")#print a message that the guess is too high
+      guess = False#set the boolean to false to signify that the user has not guessed the number
+    elif user_guess < number:#if the guess is too low
+      print("Too low")#print a message that the guess is too low
+      guess = False#set the boolean to false to signify that the user has not guessed the number
+    else:#if the guess is correct
+      print("You guessed it!")#
+      guess = True#set the boolean to true to signify that the user has guessed the number
+
+user_plays_machine()#call the function and play the game
